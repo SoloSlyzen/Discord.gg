@@ -1,0 +1,104 @@
+/* Reset du style par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2f3136; /* Couleur de fond Discord */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Conteneur principal du formulaire */
+.login-container {
+    background-color: #36393f; /* Fond du formulaire */
+    border-radius: 8px;
+    width: 400px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Entête du formulaire avec le logo Discord */
+.login-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #7289da; /* Bleu Discord */
+}
+
+/* Style des champs du formulaire */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: #b9bbbe; /* Texte gris clair */
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #72767d; /* Bordure gris clair */
+    border-radius: 5px;
+    background-color: #2f3136; /* Fond du champ */
+    color: white;
+    font-size: 14px;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #7289da; /* Bordure bleue lorsque sélectionné */
+}
+
+/* Bouton de soumission */
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #7289da; /* Bleu Discord */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #5a6abf; /* Couleur plus foncée au survol */
+}
+
+/* Pied de page avec liens */
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #b9bbbe; /* Texte gris clair */
+}
+
+.footer a {
+    color: #7289da;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

